@@ -1,0 +1,8 @@
+function isFactorOf(x,y){
+return(x%y ===0)
+
+}
+
+console.log(isFactorOf(6,2));
+console.log(isFactorOf(-6,2));
+console.log(isFactorOf(5,0));

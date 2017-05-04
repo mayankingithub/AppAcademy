@@ -1,0 +1,89 @@
+function getRandomElement(array) {
+  var randIdx = Math.floor(Math.random() * array.length);
+  return array[randIdx];
+}
+
+//console.log(getRandomElement([1,2,3,4]));
+
+/*function helloWorld() {
+  console.log("Hello, world");
+}
+
+function delayedHelloWorld() {
+  setTimeout(helloWorld, 0)
+  console.log("Goodbye world!");
+}
+
+
+
+//Another way you can write THIS
+
+function delayedHelloWorld() {
+  setTimeout(function helloWorld() {        //Asynchronous
+    console.log("Hello, world");
+  }, 0)
+  console.log("Goodbye world!");
+}
+
+//Another way you can write THIS
+
+function delayedHelloWorld() {
+  setTimeout(function() {               //
+    console.log("Hello, world");
+  }, 2000)
+  console.log("Goodbye world!");
+}
+
+delayedHelloWorld();
+
+function delayedHelloWorld() {
+  setInterval(function() {               //
+    console.log("Hello, world");
+  }, 2000)
+  console.log("Goodbye world!");
+}
+
+function helloWorld() {
+  console.log("Hello, world");
+  setTimeout(helloWorld, 2000)
+}
+
+function delayedHelloWorld() {
+  helloWorld();
+  console.log("Goodbye world!");
+}
+//delayedHelloWorld();
+
+function delayedHelloWorld() {
+  var intervalID = setInterval(function() {               //
+    console.log("Hello, world");
+  }, 2000)
+  setTimeout(function() {
+    clearInterval(intervalID);
+  },6000);
+  console.log("Goodbye world!");
+}*/
+
+var cat = {
+  name: "Fluffykins",
+  meow: function() {
+    console.log(this);
+  },
+  timeoutMeow: function() {
+    this.meow();
+    setTimeout(this.meow.bind(this), 5000);
+  },
+  infiniteTimeoutMeow: function() {
+    this.meow();
+    //setTimeout(this.infiniteTimeoutMeow.bind(this),5000);
+  },
+  intervalMeow: function() {
+    setInterval(this.meow.bind(this),5000);
+  }
+};
+
+//cat.infiniteTimeoutMeow();
+
+cat.timeoutMeow();
+
+//cat.intervalMeow();

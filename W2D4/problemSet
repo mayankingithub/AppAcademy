@@ -1,0 +1,191 @@
+/*var foo = 5;
+
+function bar() {
+  var foo = "Anthony";
+  foo + " is home";
+  return foo;
+}
+
+//console.log(foo); //What is foo on this line?
+//console.log(bar()); //What is bar() on this line?
+//console.log(foo); //What is foo on this line?
+
+var foo = 5;
+
+function bar(foo) {
+  return foo + 65;
+}
+
+//console.log(foo); //What is foo on this line?
+//console.log(bar(5)); //What is bar() on this line?
+//console.log(foo); //What is foo on this line?
+//console.log(bar(5)); //What is bar() on this line?
+
+var foo = "Happy";
+
+//for (var foo = 0; foo <= 5; foo += 1) {
+  //console.log(foo); //What will foo be on each iteration?
+}
+
+//console.log(foo); //What will foo be on this line?
+
+var bar = 5;
+console.log("1: " + bar); //1: What will bar be on this line?
+
+function foo() {
+   bar = 10;
+  console.log("3: " + bar); //3: What will bar be on this line?
+
+  var innerFoo = function() {
+    bar = 15;
+  };
+innerFoo();
+  console.log("4: " + bar); //4: What will bar be on this line?
+}
+
+console.log("2: " + bar); //2: What will bar be on this line?
+foo();
+console.log("5: " + bar); //5: What will bar be on this line?
+
+var bar = "dance";
+
+function foo() {
+  bar = 10;
+
+  var innerFoo = function() {
+    bar = 15;
+  }
+
+  console.log("2: " + bar); //2: What will bar be on this line?
+  innerFoo();
+  console.log("3: " + bar); //3: What will bar be on this line?
+}
+
+console.log("1: " + bar); //1: What will bar be on this line?
+foo();
+console.log("4: " + bar); //4: What will bar be on this line? */
+
+var factorial = function(n) {
+  var mult = 1;
+  for(var i = 1; i <= n; i++) {
+     mult *= i;
+  }
+  return mult;
+};
+/*console.log(factorial(1));
+console.log(factorial(4));
+console.log(factorial(5));
+console.log(factorial(10));*/
+
+var longWordCount = function(string) {
+  var arr = string.split(" ");
+  var count = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i].length > 7){
+      count += 1;
+    }
+  }
+  return count;
+};
+
+/*console.log(longWordCount(""));
+console.log(longWordCount("short words only"));
+console.log(longWordCount("one reallylong word"));
+console.log(longWordCount("two reallylong words inthisstring"));
+console.log(longWordCount("allwordword longwordword wordswordword"));
+console.log(longWordCount("seventy schfifty five"));*/
+
+var lcm = function(num1, num2) {
+  var mult = 1;
+  var arr = [];
+  for (var i = 1; i < num1*num2; i++) {
+    //console.log("1:" + i);
+    if(num1%i ===0 && num2%i === 0) {
+      num1 = num1/i;
+      num2 = num2/i;
+      arr.push(i);
+      //console.log("Num1 and Num2:" + num1 + "," + num2);
+    }
+    else if(num1%i === 0) {
+      num1 = num1/i;
+      arr.push(i);
+      //console.log("Num1 and Num2:" + num1 + "," + num2);
+    }
+    else if(num2%i === 0) {
+      num2 = num2/i;
+      arr.push(i);
+      //console.log("Num1 and Num2:" + num1 + "," + num2);
+    }
+  }
+  arr.push(num1);
+  arr.push(num2);
+  console.log(arr);
+
+  for(var i = 0; i < arr.length; i++) {
+    mult *= arr[i];
+  }
+  return mult;
+}
+  /*for(var i = 1; i < arr.length; i++) {
+    var found = true;
+    //console.log("1:"+arr[i]);
+    for (var j = 1; j <arr.length; j++) {
+      //console.log("2:"+arr[j]);
+      if(arr[i] !== arr[j] && arr[i]%arr[j] === 0) {
+        for(var k = j+1; k<arr.length; k++) {
+          //console.log("3:"+arr[k]);
+          if( arr[i] !== arr[k] && arr[i]%arr[k] === 0) {
+              found = false;
+              break;
+            }
+          }
+            if( found === false) {
+              break;
+          }
+        }
+      }
+    if(found) {
+        mult *= arr[i];
+        console.log("4:" + mult);
+      }
+    }
+  return mult;
+};*/
+
+
+function lcm1(num1, num2) {
+  var i = num1;
+
+  while (true) {
+    if (i % num2 === 0 ) {
+      return i;
+    }
+    i += num1;
+  }
+}
+
+//console.log(lcm(2, 3));
+console.log(lcm1(6, 10));
+//console.log(lcm(24,26));
+//console.log(lcm(42,52)); //2,2,3,7,13
+//console.log(lcm(11542, 452));
+
+var hipsterfy = function(sentence) {
+  var arr = sentence.split(" ");
+  console.log(arr);
+  for(var i = 0; i < arr.length; i++) {
+    for(var j = arr[i].length-1; j >= 0; j--) {
+      if(arr[i][j] === "a" || arr[i][j] === "e" || arr[i][j] === "i" ||
+      arr[i][j] === "o" || arr[i][j] === "u") {
+        arr[i] = arr[i].slice(0,j) + arr[i].slice(j+1);
+
+        console.log(arr[i]);
+        //arr[i].concat(newArr);
+      //  arr[i] = arr[i].slice(j).join("");
+        break;
+      }
+    }
+  }
+return arr.join (" ");
+};
+//console.log(hipsterfy("runner anaconda"));

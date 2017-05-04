@@ -1,0 +1,11 @@
+var maxValue = function(arr){
+var largestValue = null;
+
+for (var i=0; i<arr.length; i++){
+if(largestValue === null || arr[i] > largestValue){
+largestValue = arr[i];
+}
+}
+return largestValue;
+}
+console.log(maxValue([]));

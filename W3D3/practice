@@ -1,0 +1,31 @@
+// function bar(cb) {
+//   console.log("before");
+//   cb();
+//   console.log("after");
+// }
+//
+// bar(function() {
+//   console.log("callback");
+// });
+
+// function returnTheAnswer(ans) {
+//   return "The answer is" + ans + ".";
+// }
+//
+// function add(num1, num2, cb) {
+//   var sum = num1 + num2;
+//   return cb(sum);
+// }
+//
+// console.log(add(5,6, returnTheAnswer));
+
+function returnTheAnswer(ans) {
+  return "The answer is " + ans + ".";
+ }
+
+function concat(str1, str2, cb) {
+  var str = str1 + str2;
+  return cb(str);
+}
+
+console.log(concat("2", "3", returnTheAnswer));

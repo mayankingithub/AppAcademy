@@ -1,0 +1,6 @@
+function threeOrSeven(x){
+return x%3 === 0 || x%7 ===0;
+}
+console.log(threeOrSeven(3));
+console.log(threeOrSeven(42));
+console.log(threeOrSeven(8));

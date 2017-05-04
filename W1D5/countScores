@@ -1,0 +1,34 @@
+var ppl = [ {name: "Anthony", score: 10},
+            {name: "Fred", score : 10},
+            {name: "Anthony", score: -8},
+            {name: "Winnie", score: 12}];
+
+function countScores(people) {
+  var obj ={};
+for(var i=0; i< people.length; i++){
+  var person = people[i];
+  var name = person.name;
+  var score = person.score;
+
+  if(obj[name] === undefined){
+    obj[name] = score;
+  } else{
+    obj[name] += score;
+    }
+  }
+  return obj;
+}
+
+console.log (countScores(ppl));
+
+/* #1 {Anthony: 10}
+  #2 {Anthony:10,
+      Fred:10}
+  #3 {Anthony:2,
+      Fred:10}
+  #4 {Anthony:2,
+      Fred:10,
+      Winnie:12}
+      */
+
+      

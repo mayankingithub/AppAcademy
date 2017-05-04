@@ -1,0 +1,7 @@
+function isEven(x){
+var EvenIt = x%2 === 0;
+return EvenIt;
+}
+
+console.log(isEven(2));
+console.log(isEven(5));

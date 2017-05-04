@@ -1,0 +1,21 @@
+function maxValue(array){
+for(var i=0; i< array.length; i++){
+var max = true;
+  for(var y=0; y<array.length; y++){
+  if (array[i] === null){
+    return null;
+  }
+  else if (array[i]< array[y]){
+    max = false;
+    break;}
+  else{
+    max = true;
+    }
+  }
+  if(max === true)
+  return array[i];
+}
+}
+console.log(maxValue([12, 6, 43, 2]));
+console.log(maxValue([]));
+console.log(maxValue([-4, -10, 0.43]))

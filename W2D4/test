@@ -1,0 +1,12 @@
+var name = "Jimmy John Jackson";
+
+var myObj = {
+  name: "Jeffrey",
+  sayHi: function() {
+    console.log(this.name + " say hi")
+  }
+}
+
+myObj.sayHi();
+var myFunc = myObj.sayHi;
+myFunc();

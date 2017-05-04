@@ -1,0 +1,16 @@
+function wordYeller(sentence){
+  var punc = ['.', ',','!','?'';',:'']
+  var yelledWords =[];
+  var words = sentence.split(' ");
+
+  for(var i =0; i< words.length; i++){
+    var word = words[i];
+    var lastLetter = word[word.length -1];
+    if(punc.indexOf(lastLetter)!== -1){
+      yelledWords.push(word);
+      } else{
+        yelledWords.push(word +"!");
+      }
+    }
+    return yelledWords.join(" ");
+}

@@ -1,0 +1,7 @@
+function yell (string){
+var yellnow = string.toUpperCase();
+return yellnow + "!!!";
+}
+
+console.log(yell("I want to go to the store"));
+console.log(yell("Time to program"));

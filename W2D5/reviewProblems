@@ -1,0 +1,13 @@
+function concatObjects(obj1, obj2) {
+  var obj3 = {};
+  for(var key in obj1) {
+    obj3[key] = obj1[key];
+    }
+    for(var key in obj2) {
+      if(obj3[key] === undefined) {
+        obj3[key] = obj2[key];
+      } else {
+          obj3[key] += obj2[key];
+      }
+    }
+  };

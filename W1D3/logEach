@@ -1,0 +1,5 @@
+function logEach(array){
+for (var i = 0; i< array.length; i++)
+console.log(i+":"+array[i]+console.log(array[i]);
+}
+logEach(["Anthony", "John", "Carson"]);

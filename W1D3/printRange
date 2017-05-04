@@ -1,0 +1,9 @@
+var printRange = function(start,end){
+  if(start>end){
+    console.log("Bad Range");
+  }
+  for(var i = start; i<=end; i++){
+    console.log(i);
+  }
+}
+printRange(22,24);

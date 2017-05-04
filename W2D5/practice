@@ -1,0 +1,9 @@
+var HelloWorld = function() {
+  console.log("Hello, World!!");
+};
+
+var DelayedHelloWorld = function(ms) {
+  setTimeout(HelloWorld, ms);
+};
+
+DelayedHelloWorld(5000);

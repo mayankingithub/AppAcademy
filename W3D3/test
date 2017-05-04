@@ -1,0 +1,102 @@
+// function test(num) {
+//   return num;
+// }
+//
+// function test1(num) {
+//   setTimeout(function() {
+//     test(num);},1000);
+//   console.log("World");
+// }
+//
+// console.log(test1(4));
+
+function test(num) {
+  return num;
+}
+
+function test2(num) {
+  setTimeout(function (){
+    return test(num);
+  }, 1000)
+}
+
+//test2();
+//console.log(test2(4));
+
+var foo = function() {
+  console.log("yo");
+}
+
+var bar = function() {
+  console.log("before the callback");
+  foo();
+  console.log("after the callback");
+}
+
+console.log(bar()); // In what order will things be logged?
+
+var logTheAnswer = function(answer) {
+  return ("The answer is " + answer + ".");
+}
+
+var add5ToAnswer = function(answer) {
+  return answer + 5;
+}
+
+var add = function(num1, num2, cb) {
+  var sum = num1 + num2;
+  return cb(sum);
+}
+
+var concatenate = function(str1, str2, cb) {
+  var str = str1 + str2;
+  return cb(str);
+}
+
+//console.log(add(1,2,logTheAnswer)); // What will this return?
+//console.log(add(1,2,add5ToAnswer)); // What will this return?
+
+//console.log(concatenate("1","2",logTheAnswer)); // What will this return?
+//console.log(concatenate("1","2",add5ToAnswer)); // What will this return?
+
+
+var arr = [1,2,3,4];
+
+arr.forEach(function(x, y, z) {
+  //console.log(x);
+  //console.log(y);
+  //console.log(z);
+});
+
+var cookieMonster = {
+  name : "Cookie",
+  favoriteFoods : ["apple", "cookie", "orange"],
+
+  badLogFavFoods: function() {
+    this.favoriteFoods.forEach(function(food) {
+      console.log(this.name + " loves " + food + "!");
+    }, cookieMonster);
+  }
+}
+
+//cookieMonster.badLogFavFoods();
+
+function whatup(string1) {
+  return function(string2) {
+    return (string1 + "!! " + string2 + ".");
+  }
+}
+
+var call = whatup("Whatup")("Homie");
+//console.log(call);
+
+function foo() {
+  console.log("hey!");
+}
+
+function badAsync() {
+  setTimeout(foo, 1000);
+  console.log("don't log me until timeout is finished!");
+}
+
+//badAsync();

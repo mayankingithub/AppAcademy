@@ -1,0 +1,10 @@
+var obj = {name: "Thomas" , hometown: "Fairfield"}
+
+for (var key in obj){
+console.log(key);
+}
+
+for (var key in obj){
+var value = obj[key];
+console.log(value);
+}

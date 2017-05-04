@@ -1,0 +1,7 @@
+function isFive(x){
+  return x + 5;
+}
+
+console.log(isFive(0));
+console.log(isFive(-2));
+console.log(isFive(21));

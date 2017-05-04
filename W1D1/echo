@@ -1,0 +1,8 @@
+function echo(string){
+var EchoString = string.toUpperCase() + " ... " + string + " ... " +string.toLowerCase();
+return EchoString;
+}
+
+console.log(echo("Mom!"));
+console.log(echo("hey"));
+console.log(echo("JUMp"));

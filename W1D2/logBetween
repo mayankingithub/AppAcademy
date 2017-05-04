@@ -1,0 +1,7 @@
+function logBetween(lowNum, highNum) {
+for( var x = lowNum; x <= highNum ; x++)
+{
+  console.log(x);
+}
+}
+logBetween(-1,2);

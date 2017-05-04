@@ -1,0 +1,42 @@
+var HelloWorld = function() {
+  console.log("Hello, World!!");
+};
+
+var DelayedHelloWorld = function(ms) {
+  setTimeout(HelloWorld, ms);
+  console.log("I am first");
+};
+
+//DelayedHelloWorld(5000);
+
+function annoyingMeow() {
+  setTimeout(annoyingMeow, 1000);
+  console.log("Annoy me now!!!");
+}
+
+//annoyingMeow();
+
+function newWaytoAnnoyMe() {
+  setInterval(console.log("Meow"), 1000);
+}
+
+//newWaytoAnnoyMe();
+
+var cat = {
+  name : "Curie",
+
+  annoyingTimeoutMeow : function() {
+    console.log(this.name + " says meow");
+    setTimeout(this.annoyingTimeoutMeow.bind(this), 1000);
+  },
+
+  annoyingIntervalMeow : function() {
+    setInterval(function() {
+      console.log(this.name + " says meow");
+    }.bind(this), 1000);
+  }
+}
+
+
+
+cat.annoyingTimeoutMeow();

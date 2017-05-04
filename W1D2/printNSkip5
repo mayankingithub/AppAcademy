@@ -1,0 +1,15 @@
+function printNSkip5(n) {
+  var i = 0;
+
+  while (i < n) {
+    if (i % 5 === 0) {
+    i += 1;
+      continue;
+    }
+
+    console.log(i);
+    i += 1;
+  }
+}
+
+console.log(printNSkip5(10));

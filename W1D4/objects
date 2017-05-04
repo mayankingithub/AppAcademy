@@ -1,0 +1,21 @@
+var person = {
+name: "Thomas",
+city: "Oakland",
+height: 72,
+nicknames: ["chipmunk", "Baba"]
+}
+console.log(person);
+
+var spaceship = {fuel:100};
+spaceship.fly = function(){
+  if(this.fuel >= 50){
+  this.fuel -= 50;
+  return "You have a calm flight..";
+  }
+  else{
+  return "Sorry, Not enough fuel."
+  }
+  }
+console.log(spaceship.fly());
+
+console.log(Object.keys(spaceship));

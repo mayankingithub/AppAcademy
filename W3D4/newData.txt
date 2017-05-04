@@ -1,0 +1,6 @@
+//newData.txt
+
+I love you 2
+"You love me", 3
+"We like each other", 4
+"Nobody like each other", 1

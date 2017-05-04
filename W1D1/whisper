@@ -1,0 +1,7 @@
+function whisper (string){
+var whisperNow = "..." + string.toLowerCase()+ "...";
+return whisperNow;
+}
+
+console.log(whisper("Hey Anthony"));
+console.log(whisper("YEA! that was fun"));

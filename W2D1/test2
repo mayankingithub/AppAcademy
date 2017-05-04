@@ -1,0 +1,12 @@
+var users1 = [
+  {id: 0, username: "UserName1"},
+  {id: 1, username: "UserName2"}
+];
+function printUsers (users) {
+  for (var i = 0; i < users.length; i++) {
+    var user = users[i];
+    console.log(user.id + ": " + user.username);
+  }
+}
+
+printUsers(users1);
